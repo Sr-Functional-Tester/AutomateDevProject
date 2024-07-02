@@ -1,0 +1,37 @@
+outputPath: A:\\Projects\\AutomationWorkspace\\output
+project-name: AutomationDevDraft
+package: com.auto.dev
+java-version: 17
+project-type: spring-boot
+spring-boot-version: 3.2.6
+jpa-type: spring-data-jpa-hibernate
+project-description: Automaton Dev Project
+
+models:
+  package: com.auto.dev.model
+  User:
+    model-type: entity
+    attribute1: long userId
+    attribute2: String userName
+    attribute3: String userInterests
+  Item:
+    model-type: entity
+    attribute1: long itemId
+    attribute2: String itemName
+    attribute3: String itemDescription
+    attribute4: String itemCost
+
+relationships:
+  relationship1: User OneToMany Item
+
+datasource:
+  url: jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist
+  username: sa
+  password: password
+  driver-class: org.mysql.Driver
+
+
+
+
+
+
